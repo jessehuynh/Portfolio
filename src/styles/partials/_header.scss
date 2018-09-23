@@ -1,0 +1,48 @@
+header {
+    background:$white;
+    // border:1px solid purple;
+    grid-column: 1 / 4;
+    grid-row: 1 / span 1;
+    z-index:20;
+    overflow-y:scroll;
+    height:50vh;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    .wrapper {
+        // border:3px solid green;
+        background:url(../../../assets/box.png);
+        background-size:contain;
+        @include dFlex(row wrap, flex-end, center);
+        display:grid;
+        grid-template-columns:100px 100px 1fr;
+        grid-template-rows:50vh;
+    }
+    .heading__h2 {
+        line-height:1;
+        letter-spacing:5px;
+    }
+    .heading__h2--jesse {
+        font-size:8rem;
+        // border:1px solid red;
+        transform:rotate(270deg);
+        grid-column-end:-1;
+    }
+    .heading__h4 {
+        font-size:4rem;
+        position: absolute;
+        top:45%;
+        left:50%;
+        transform: translate(-50%);
+        // border:1px solid red;
+    }
+    section {
+        width:100%;
+        border-left:3px solid $light;
+        @include dFlex(row wrap, inherit, inherit);
+        .container__text {
+            padding:2rem 3rem; 
+            width:100%;
+            
+        }
+    }
+}

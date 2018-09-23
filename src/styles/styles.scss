@@ -1,3 +1,43 @@
+@import 'partials/_setup.scss';
+@import 'partials/_utils.scss';
+@import 'partials/typography.scss';
+
+* {
+    margin:0;
+    transition:color 0.3s ease-in-out;
+}
+
 body {
-    background: red;
+    //   border:1px solid red;
+  background:$light;
+  @include fontBase($baseFont, inherit);
+  @include fontSize(1.6rem, 1.5);
+  height:100vh;
+  max-height:100vh;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows:1fr, 1fr;
+  padding:0.5rem;
+}
+
+@import 'partials/_header.scss';
+@import 'partials/_main.scss';
+@import 'partials/_footer.scss';
+
+img {
+    width:100%;
+    display:block;
+}
+
+.wrapper {
+    display:flex;
+    // border:1px solid red;
+}
+
+h1, h2, h3, h4, h5, a {
+    @include fontBase($headFont, uppercase);
+}
+
+li {
+    list-style:none;
 }

@@ -1,0 +1,16 @@
+$headFont: 'Roboto Condensed', sans-serif;
+$baseFont: 'Cabin', sans-serif;
+
+
+@mixin fontSize($fontSize, $lineHeight) {
+    font-size: $fontSize;
+    line-height:$lineHeight;
+    color:$base;
+}
+
+@mixin fontBase($fontFamily, $textTransform) {
+    font-family:$fontFamily;
+    text-transform:$textTransform;
+    color:$base;
+}
+

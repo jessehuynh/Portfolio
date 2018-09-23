@@ -1,0 +1,43 @@
+$white: #FFF;
+$base: #000;
+$light: #e8e8e8;
+$baseFont:'Roboto Condensed', sans-serif;
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top:$top;
+    right:$right;
+    bottom:$bottom;
+    left:$left;
+}
+
+@mixin dFlex($direction, $justify, $align){
+    display:flex;
+    flex-flow:$direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin breakPoint($point) {
+    @if $point == firstBreak {
+        @media (max-width:1270px) { @content;}
+    }
+    @if $point == secondBreak {
+        @media (max-width:1120px) { @content;}
+    }
+    @if $point == thirdBreak {
+        @media (max-width:1002px) { @content;}
+    }
+    @if $point == fourthBreak {
+        @media (max-width:785px) {@content;}
+    }
+    @if $point == fifthBreak {
+        @media (max-width:635px) {@content;}
+    }
+    @if $point == sixthBreak {
+        @media (max-width:500px) {@content;}
+    }
+    @if $point == seventhBreak {
+        @media (max-width:450px) {@content;}
+    }
+}
