@@ -1,7 +1,7 @@
 header {
     background:$white;
     // border:1px solid purple;
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     grid-row: 1 / span 1;
     z-index:20;
     overflow-y:scroll;
@@ -10,12 +10,13 @@ header {
     grid-template-columns:repeat(3, 1fr);
     .wrapper {
         // border:3px solid green;
-        background:url(../../../assets/box.png);
+        background:url(../../assets/box.png);
         background-size:contain;
         @include dFlex(row wrap, flex-end, center);
         display:grid;
-        grid-template-columns:100px 100px 1fr;
+        grid-template-columns:1fr 1fr 1fr;
         grid-template-rows:50vh;
+        z-index: 10;
     }
     .heading__h2 {
         line-height:1;
@@ -26,6 +27,8 @@ header {
         // border:1px solid red;
         transform:rotate(270deg);
         grid-column-end:-1;
+        position: relative;
+        left:6.75rem;
     }
     .heading__h4 {
         font-size:4rem;
@@ -34,15 +37,35 @@ header {
         left:50%;
         transform: translate(-50%);
         // border:1px solid red;
+        background:$light;
+        line-height:1;
     }
-    section {
-        width:100%;
+    .container--about {
+        // border:1px solid red;
+        grid-column: 2 / -1;
         border-left:3px solid $light;
         @include dFlex(row wrap, inherit, inherit);
-        .container__text {
-            padding:2rem 3rem; 
+        box-shadow:inset 1px 1px 7.5px $dark;
+        .card {
+            @include dFlex(row-reverse nowrap, inherit, center);
             width:100%;
-            
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            .card__image {
+                grid-column:2 / 3;
+                width:100%;
+                height:50vh;
+                overflow: hidden;
+                img {
+                    position: relative;
+                    bottom:10rem;
+                }
+            }
+            .card__text {
+                grid-row:1;
+                width:100%;
+                padding:1rem 2rem;
+            }
         }
     }
 }

@@ -6,10 +6,15 @@ main {
     overflow-y:scroll;
     border-right:3px solid $light;
     border-top:3px solid $light;
+    // height:calc(50vh - 0.5rem);
+    height:50vh;
+    // margin-bottom:4vh;
+    box-shadow:inset 1px 1px 7.5px $dark;
 }
 
 .container {
     // border:1px solid red;
+    // background:$white;
     .container__list {
         @include dFlex(row wrap, center, center);
         padding:0;
@@ -17,24 +22,21 @@ main {
             // border:1px solid red;
             text-align: center;
             width:calc(100% / 3);
-            margin-bottom:0.5rem;
+            margin:1.25rem 0;
             @include dFlex(column wrap, center, center);
             i {
                 font-size:5rem;
+            }
+            i.grey {
                 color:#939393;
             }
             .firebase {
-                width:35px;
+                width:37px;
                 text-align: center;
                 justify-content: center;
                 filter:grayscale(100);
             }
         }
-    }
-    .card {
-        // border:1px solid red;
-        margin:2rem;
-        width:50%;
     }
 }
 
@@ -47,6 +49,44 @@ main {
     }
 }
 
-// .container--portfolio {
-//     border:1px solid red;
-// }
+.container--portfolio {
+    // border:1px solid red;
+    .stripes {
+        width:50%;
+        // border:1px solid red;
+        background:url(../../assets/box.png);
+        display:flex;
+        align-items:center;
+        margin:0 1rem;
+    }
+    .card {
+        // border:1px solid red;
+        margin:1.5rem;
+        width:calc(100% - 4rem);
+        display:flex;
+    }
+    .card__image {
+        width:50%;
+        img {
+            border:1px solid $dark;
+        }
+    }
+    .card__text {
+        background:$white;
+        margin:2rem;
+        padding:0.5rem 1rem;
+        border:2px solid $light;
+        @include dFlex(row wrap, inherit, center);
+        .card__list {
+            @include dFlex(row wrap, inherit, center);
+            padding:0;
+            .nav__listItem {
+                margin-right:1rem;
+            }
+        }
+        nav {
+            width:100%;
+        }
+    }
+    
+}

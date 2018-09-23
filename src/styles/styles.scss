@@ -17,7 +17,7 @@ body {
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   grid-template-rows:1fr, 1fr;
-  padding:0.5rem;
+//   padding:0.5rem;
 }
 
 @import 'partials/_header.scss';
@@ -38,6 +38,14 @@ h1, h2, h3, h4, h5, a {
     @include fontBase($headFont, uppercase);
 }
 
+h3 {
+    background:$light;
+    display:inline-block;
+    padding:0 1rem;
+    // border:1px solid red;
+}
+
 li {
     list-style:none;
 }
+

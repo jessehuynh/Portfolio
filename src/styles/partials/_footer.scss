@@ -1,5 +1,7 @@
 footer {
     background:$white;
-    // border:1px solid green;
-    // display:none;
+    border-top:3px solid $light;
+    background-image:url(../../assets/box.png);
+    background-size:contain;
+    height:50vh;
 }

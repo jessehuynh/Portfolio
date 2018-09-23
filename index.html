@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <link rel="stylesheet" href="public/styles/style.css">
-    <title>jesse | web developer</title>
+    <title>jesse huynh | web developer</title>
 </head>
 
 <body>
@@ -66,17 +69,22 @@
         </div>
 
         <!-- ABOUT SECTION -->
-        <section class="container" id="about">
+        <section class="container container--about" id="about">
             <h3 class="visuallyhidden">About</h3>
-            <article class="container__text">
-                <p class="container__text__p">Hi friends! My name is Jessica, but you can call me Jesse. My love for art/design and technology has turned me, from a Halifax-based hairstylist, into a front-end web developer, currently based in Toronto. I am a recent graduate of HackerYou's Full-Time Web Immersive Bootcamp! I’m looking to improve my Javascript skills, and to learn new frameworks/languages to incorporate into my clean/dry code, but.. also, just for fun!</p>
-
-                <p class="container__text__p">When I’m giving my laptop the opportunity to cool down, I’m thrift-shopping at local boutiques, playing Overwatch, and working out so I can eat twice the amount of snacks!</p>
-
-                <p class="container__text__p">TLDR: I'm pretty great.. Let's collaborate!</p>
-            </section>
-                </article>
-        <!-- ABOUT SECTION ENDS -->
+            <article class="card card--about">
+                <figure class="card__image">
+                    <img src="./assets/2018-summer-bootcamp-jessica-huynh-4.jpg" alt="Headshot of web developer Jesse Huynh. Photo by Pam Lau">
+                </figure>
+                <figcaption class="card__text"> 
+                    <p class="card__text__p">My love for art/design, technology, and puzzles has turned me, from a Halifax-based hairstylist, into a front-end web developer, currently based in Toronto. I believe in writing clean, efficient code while creating an engaging user experience through my work. </p>
+    
+                    <p class="card__text__p">When I’m giving my laptop the opportunity to cool down, I’m thrift-shopping at local boutiques, playing Overwatch, and working out so I can eat twice the amount of snacks!</p>
+    
+                    <!-- <p class="card__text__p">TLDR: I'm pretty great.. Let's collaborate!</p> -->
+                </figcaption>
+            </article>
+        </section>
+            <!-- ABOUT SECTION ENDS -->
     </header>
     <!-- HEADER ENDS -->
 
@@ -86,134 +94,161 @@
             <!-- <div class="wrapper"> -->
                 <h3>Portfolio//</h3>
                 <!-- e-Card app -->
-                <article class="card card--portfolio">
-                    <figure class="card__image">
-                        <img src="./assets/eCardMaker.jpg" alt="Screenshot of Jesse's e-Card Maker app">
-                    </figure>
-                    <figcaption class="card__text">
-                        <div class="card__line card__line--odd"></div>
-                        <h4>e-Card Maker</h4>
-                        <p>This e-Card React app uses HTML, CSS and Javascript to allow user's to create their own e-Cards.
-                            Create and save a card, to the gallery or your device, and share it this holiday. Currently featuring Halloween Cards. Give it a try and send me a card!</p>
-                        <ul class="card__list">
-                            <li>HTML</li>
-                            <li>CSS & Sass</li>
-                            <li>Javascript</li>
-                            <li>React</li>
-                        </ul>
-                        <a href="https://project-5-cc355.firebaseapp.com/" target=”_blank”>View Live</a>
-                        <a href="https://github.com/jessehuynh/JessicaHuynhProject5" target="_blank">GitHub</a>
-                    </figcaption>
-                </article>
+                <div class="flickity">
 
 
-                <!-- Stumble Grumble Restaurant Finder app -->
-                <article class="card card--portfolio">
-                    <figure class="card">
-                        <img src="./assets/StumbleGrumble.jpg" alt="Screenshot of the Stumble Grumble Restaurant Finder's opening page">
-                    </figure>
-                    <figcaption class="card__text card__text--even">
-                        <div class="card__line card__line--even"></div>
-                        <h4>StumbleGrumble</h4>
-                        <p>Hungry? This StumbleGrumble React app uses Javascript and a few google APIs to generate as list of
-                            food options near you. Simply, allow us to use your location, or if you prefer, manually enter your
-                            address! Built in collabortion with <a class="team" href="http://www.claireristow.com" target="_blank">Claire
-                                Ristow</a> and <a class="team" href="http://www.moingani.com" target="_blank">Moin Gani</a>.</p>
-                        <ul class="card__list">
-                            <li>HTML</li>
-                            <li>CSS & Sass</li>
-                            <li>Javascript</li>
-                            <li>React</li>
-                        </ul>
-                        <a href="https://stumblegrumble-a293b.firebaseapp.com/" target=”_blank”>View Live</a>
-                        <a href="https://github.com/jessehuynh/claire_jesse_moin_stumble_grumble" target="_blank">GitHub</a>
-                    </figcaption>
-                </article>
-
-                <!-- Overwatch Database app -->
-                <article class="card card--portfolio">
-                    <figure class="card__image">
-                        <img src="./assets/overwatch.jpg" alt="Screenshot of Overwatch app's landing page">
-                    </figure>
-                    <figcaption class="card__text card__text--odd">
-                        <div class="card__line card__line--odd"></div>
-                        <h4>Overwatch Database</h4>
-                        <p>Look up your favourite Overwatch Hero with this database! This app uses Javascript and APIs to
-                            display hero stats and their location dynamically. Built in collaboration with <a class="team" href="http://www.erinmaaskant.com"
-                                target="_blank">Erin Maaskant.</a></p>
-                        <ul class="card__list">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-                            <li>jQuery</li>
-                        </ul>
-                        <a href="https://erinannette.github.io/jessica-huynh-erin-maaskant-project4/" target=”_blank”>View Live</a>
-                        <a href="https://github.com/jessehuynh/jessica-huynh-erin-maaskant-project4" target="_blank">GitHub</a>
-                    </figcaption>
-                </article>
-
-
-                <!-- One-Minute Hair Consultation app -->
-                <article class="card card--portfolio">
-                    <figure class="card__image">
-                        <img src="./assets/OneMinuteHairConsultation.jpg" alt="Screenshot of the One Minute Hair Consultation app">
-                    </figure>
-                    <figcaption class="card__text card__text--even">
-                        <div class="card__line card__line--even"></div>
-                        <h4>One Minute Hair Consultation</h4>
-                        <p>If you have a minute, you have the time for this hair consultation! This Javascript / jQuery
-                            application
-                            generates a suitable hairstyle based off of a list of generalized features and the user's
-                            selections.</p>
-                        <ul class="card__list">
-                            <li>HTML</li>
-                            <li>CSS & Sass</li>
-                            <li>Javascript</li>
-                            <li>jQuery</li>
-                        </ul>
-                        <a href="https://jessehuynh.github.io/JessicaHuynhProject3/" target=”_blank”>View Live</a>
-                        <a href="https://github.com/jessehuynh/JessicaHuynhProject3" target="_blank">GitHub</a>
-                    </figcaption>
-                </article>
-
-                <!-- Sheridan Eye Clinic website -->
-                <!-- <article data-aos="flip-left" class="card card--portfolio">
-                            <figure class="card__image">
-                                <img src="./assets/SheridanEyeClinic.jpg" alt="Screenshot of Sheridan Eye Clinic's website landing page">
-                            </figure>
-                            <figcaption data-aos="flip-right" class="card__text card__text--odd">
+                    <article class="card card--portfolio">
+                        <figure class="card__image">
+                            <img src="./assets/eCardMaker.jpg" alt="Screenshot of Jesse's e-Card Maker app">
+                        </figure>
+                        <div class="stripes">
+                            <figcaption class="card__text">
                                 <div class="card__line card__line--odd"></div>
-                                <h4>Sheridan Eye Clinic</h4>
-                                <p>
-                                Sheridan Eye Clinic is a family business located in Mississauga, Ontario. Earlier this year, I designed/created this website using HTML & CSS and jQuery.
-                                </p>
+                                <h4>e-Card Maker</h4>
+                                <p>This e-Card React app uses HTML, CSS and Javascript to allow user's to create their own e-Cards.
+                                    Create and save a card, to the gallery or your device, and share it this holiday. Currently featuring Halloween Cards. Give it a try and send me a card!</p>
                                 <ul class="card__list">
-                                    <li>HTML</li>
-                                    <li>CSS & Sass</li>
-                                    <li>jQuery</li>
+                                    <li class="nav__listItem">HTML</li>
+                                    <li class="nav__listItem">CSS & Sass</li>
+                                    <li class="nav__listItem">Javascript</li>
+                                    <li class="nav__listItem">React</li>
                                 </ul>
-                                <a href="#" target=”_blank”>View Live</a>
+                                <nav>
+                                    <a href="https://project-5-cc355.firebaseapp.com/" target=”_blank”>View Live</a>
+                                    <a href="https://github.com/jessehuynh/JessicaHuynhProject5" target="_blank">GitHub</a>
+                                </nav>
                             </figcaption>
-                        </article> -->
-                <!-- Corporate PSD Website -->
-                <article class="card card--portfolio">
-                    <figure class="card__image">
-                        <img src="./assets/Corporate.jpg" alt="Screenshot of the Corporate hero">
-                    </figure>
-                    <figcaption class="card__text card__text--odd">
-                        <div class="card__line card__line--odd"></div>
-                        <h4>Corporate - PSD Conversion</h4>
-                        <p>This PSD conversion shows a great use of BEM (naming convention), in combination with sass, to
-                            render a sleek and pixel-perfect design.</p>
-                        <ul class="card__list">
-                            <li>HTML</li>
-                            <li>CSS & Sass</li>
-                            <li>Responsive</li>
-                        </ul>
-                        <a href="https://jessehuynh.github.io/JessicaHuynhProject2/" target=”_blank”>View Live</a>
-                        <a href="https://github.com/jessehuynh/JessicaHuynhProject1" target="_blank">GitHub</a>
-                    </figcaption>
-                </article>
+                        </div>
+                    </article>
+    
+    
+                    <!-- Stumble Grumble Restaurant Finder app -->
+                    <article class="card card--portfolio">
+                        <figure class="card__image">
+                            <img src="./assets/StumbleGrumble.jpg" alt="Screenshot of the Stumble Grumble Restaurant Finder's opening page">
+                        </figure>
+                        <div class="stripes">
+
+                            <figcaption class="card__text card__text--even">
+                                <div class="card__line card__line--even"></div>
+                                <h4>StumbleGrumble</h4>
+                                <p>Hungry? This StumbleGrumble React app uses Javascript and a few google APIs to generate as list of
+                                    food options near you. Simply, allow us to use your location, or if you prefer, manually enter your
+                                    address! Built in collabortion with <a class="team" href="http://www.claireristow.com" target="_blank">Claire
+                                        Ristow</a> and <a class="team" href="http://www.moingani.com" target="_blank">Moin Gani</a>.</p>
+                                <ul class="card__list">
+                                    <li class="nav__listItem">HTML</li>
+                                    <li class="nav__listItem">CSS & Sass</li>
+                                    <li class="nav__listItem">Javascript</li>
+                                    <li class="nav__listItem">React</li>
+                                </ul>
+                                <nav>
+                                    <a href="https://stumblegrumble-a293b.firebaseapp.com/" target=”_blank”>View Live</a>
+                                    <a href="https://github.com/jessehuynh/claire_jesse_moin_stumble_grumble" target="_blank">GitHub</a>
+                                </nav>
+                            </figcaption>
+                        </div>
+                    </article>
+    
+                    <!-- Overwatch Database app -->
+                    <article class="card card--portfolio">
+                        <figure class="card__image">
+                            <img src="./assets/overwatch.jpg" alt="Screenshot of Overwatch app's landing page">
+                        </figure>
+                        <div class="stripes">
+
+                            <figcaption class="card__text card__text--odd">
+                                <div class="card__line card__line--odd"></div>
+                                <h4>Overwatch Database</h4>
+                                <p>Look up your favourite Overwatch Hero with this database! This app uses Javascript and APIs to
+                                    display hero stats and their location dynamically. Built in collaboration with <a class="team" href="http://www.erinmaaskant.com"
+                                        target="_blank">Erin Maaskant.</a></p>
+                                <ul class="card__list">
+                                    <li class="nav__listItem">HTML</li>
+                                    <li class="nav__listItem">CSS</li>
+                                    <li class="nav__listItem">Javascript</li>
+                                    <li class="nav__listItem">jQuery</li>
+                                </ul>
+                                <nav>
+                                    <a href="https://erinannette.github.io/jessica-huynh-erin-maaskant-project4/" target=”_blank”>View Live</a>
+                                    <a href="https://github.com/jessehuynh/jessica-huynh-erin-maaskant-project4" target="_blank">GitHub</a>
+                                </nav>
+                            </figcaption>
+                        </div>
+                    </article>
+    
+    
+                    <!-- One-Minute Hair Consultation app -->
+                    <article class="card card--portfolio">
+                        <figure class="card__image">
+                            <img src="./assets/OneMinuteHairConsultation.jpg" alt="Screenshot of the One Minute Hair Consultation app">
+                        </figure>
+                        <div class="stripes">
+
+                            <figcaption class="card__text card__text--even">
+                                <div class="card__line card__line--even"></div>
+                                <h4>One Minute Hair Consultation</h4>
+                                <p>If you have a minute, you have the time for this hair consultation! This Javascript / jQuery
+                                    application
+                                    generates a suitable hairstyle based off of a list of generalized features and the user's
+                                    selections.</p>
+                                <ul class="card__list">
+                                    <li class="nav__listItem">HTML</li>
+                                    <li class="nav__listItem">CSS & Sass</li>
+                                    <li class="nav__listItem">Javascript</li>
+                                    <li class="nav__listItem">jQuery</li>
+                                </ul>
+                                <nav>
+                                    <a href="https://jessehuynh.github.io/JessicaHuynhProject3/" target=”_blank”>View Live</a>
+                                    <a href="https://github.com/jessehuynh/JessicaHuynhProject3" target="_blank">GitHub</a>
+                                </nav>
+                            </figcaption>
+                        </div>
+                    </article>
+    
+                    <!-- Sheridan Eye Clinic website -->
+                    <!-- <article data-aos="flip-left" class="card card--portfolio">
+                                <figure class="card__image">
+                                    <img src="./assets/SheridanEyeClinic.jpg" alt="Screenshot of Sheridan Eye Clinic's website landing page">
+                                </figure>
+                                <figcaption data-aos="flip-right" class="card__text card__text--odd">
+                                    <div class="card__line card__line--odd"></div>
+                                    <h4>Sheridan Eye Clinic</h4>
+                                    <p>
+                                    Sheridan Eye Clinic is a family business located in Mississauga, Ontario. Earlier this year, I designed/created this website using HTML & CSS and jQuery.
+                                    </p>
+                                    <ul class="card__list">
+                                        <li>HTML</li>
+                                        <li>CSS & Sass</li>
+                                        <li>jQuery</li>
+                                    </ul>
+                                    <a href="#" target=”_blank”>View Live</a>
+                                </figcaption>
+                            </article> -->
+                    <!-- Corporate PSD Website -->
+                    <article class="card card--portfolio">
+                        <figure class="card__image">
+                            <img src="./assets/Corporate.jpg" alt="Screenshot of the Corporate hero">
+                        </figure>
+                        <div class="stripes">
+
+                            <figcaption class="card__text card__text--odd">
+                                <div class="card__line card__line--odd"></div>
+                                <h4>Corporate - PSD Conversion</h4>
+                                <p>This PSD conversion shows a great use of BEM (naming convention), in combination with sass, to render a sleek and pixel-perfect design.</p>
+                                <ul class="card__list">
+                                    <li class="nav__listItem">HTML</li>
+                                    <li class="nav__listItem">CSS & Sass</li>
+                                    <li class="nav__listItem">Responsive</li>
+                                </ul>
+                                <nav>
+                                    <a href="https://jessehuynh.github.io/JessicaHuynhProject2/" target=”_blank”>View Live</a>
+                                    <a href="https://github.com/jessehuynh/JessicaHuynhProject1" target="_blank">GitHub</a>
+                                </nav>
+                            </figcaption>
+                        </div>
+                    </article>
+                </div>
         </section>
     </main>
 <!-- MAIN ENDS -->
@@ -221,60 +256,60 @@
     <!-- FOOTER STARTS -->
     <footer>
         <section class="container container--skills">
+            <h3>Skills//</h3>
             <div class="wrapper">
-                <h3>Skills//</h3>
                 <ul class="container__list">
                     <li class="nav__listItem">
                         <i class="devicon-html5-plain"></i>
-                        <h5>HTML5</h5>
+                        <!-- <h5>HTML5</h5> -->
                     </li>
         
                     <li class="nav__listItem">
                         <i class="devicon-javascript-plain"></i>
-                        <h5>Javascript</h5>
+                        <!-- <h5>Javascript</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <figure class="firebase">
                             <img src="./assets/firebase-logo.png" alt="Firebase logo">
                         </figure>
-                        <h5 id="firebase">Firebase</h5>
+                        <!-- <h5 id="firebase">Firebase</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="devicon-illustrator-line"></i>
-                        <h5>Illustrator</h5>
+                        <!-- <h5>Illustrator</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="devicon-gulp-plain"></i>
-                        <h5>Gulp</h5>
+                        <!-- <h5>Gulp</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="devicon-sass-original"></i>
-                        <h5>Sass</h5>
+                        <!-- <h5>Sass</h5> -->
                     </li>
         
                     <li class="nav__listItem">
                         <i class="devicon-css3-plain"></i>
-                        <h5>CSS3</h5>
+                        <!-- <h5>CSS3</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="devicon-react-original"></i>
-                        <h5>React</h5>
+                        <!-- <h5>React</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="devicon-jquery-plain"></i>
-                        <h5>jQuery</h5>
+                        <!-- <h5>jQuery</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="devicon-photoshop-line"></i>
-                        <h5>Photoshop</h5>
+                        <!-- <h5>Photoshop</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="devicon-github-plain"></i>
-                        <h5>GitHub</h5>
+                        <!-- <h5>GitHub</h5> -->
                     </li>
                     <li class="nav__listItem">
                         <i class="fas fa-mobile-alt"></i>
-                        <h5>Responsive</h5>
+                        <!-- <h5>Responsive</h5> -->
                     </li>
                     
                 </ul>
@@ -289,6 +324,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="public/scripts/app.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>
