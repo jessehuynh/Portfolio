@@ -21,7 +21,7 @@ $baseFont:'Roboto Condensed', sans-serif;
 
 @mixin breakPoint($point) {
     @if $point == firstBreak {
-        @media (max-width:1270px) { @content;}
+        @media (max-width:1150px) { @content;}
     }
     @if $point == secondBreak {
         @media (max-width:1120px) { @content;}

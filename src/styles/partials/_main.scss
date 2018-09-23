@@ -51,32 +51,48 @@ main {
 
 .container--portfolio {
     // border:1px solid red;
-    .stripes {
-        width:50%;
-        // border:1px solid red;
-        background:url(../../assets/box.png);
-        display:flex;
-        align-items:center;
-        margin:0 1rem;
+    .flickity {
+        position: relative;
+        top:1.5rem;
     }
     .card {
         // border:1px solid red;
-        margin:1.5rem;
-        width:calc(100% - 4rem);
-        display:flex;
+        margin:0 auto;
+        width:100%;
     }
     .card__image {
-        width:50%;
+        width:90%;
+        // border:1px solid red;
+        margin:0 auto;
+        display:flex;
         img {
             border:1px solid $dark;
         }
+        @include breakPoint(firstBreak) {
+            width:80%;
+            position: relative;
+            &:hover .card__text {
+                opacity:1;
+            }
+        }
     }
     .card__text {
-        background:$white;
-        margin:2rem;
+        background:rgba(255,255,255,0.8);
+        width:70%;
+        // margin:2rem;
         padding:0.5rem 1rem;
-        border:2px solid $light;
+        transition:opacity 0.3s;
+        // border:1px solid blue;
         @include dFlex(row wrap, inherit, center);
+        @include breakPoint(firstBreak) {
+            position: absolute;
+            width:100%;
+            top:auto;
+            right:0;
+            bottom:0;
+            left:0;
+            opacity:0;
+        }
         .card__list {
             @include dFlex(row wrap, inherit, center);
             padding:0;

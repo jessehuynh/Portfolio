@@ -4,7 +4,7 @@
 
 * {
     margin:0;
-    transition:color 0.3s ease-in-out;
+    transition:box-shadow 0.2s ease-in-out;
 }
 
 body {
@@ -12,6 +12,7 @@ body {
   background:$light;
   @include fontBase($baseFont, inherit);
   @include fontSize(1.6rem, 1.5);
+  letter-spacing:0.2px;
   height:100vh;
   max-height:100vh;
   display:grid;
@@ -36,13 +37,17 @@ img {
 
 h1, h2, h3, h4, h5, a {
     @include fontBase($headFont, uppercase);
+    display:inline-block;
 }
 
 h3 {
     background:$light;
-    display:inline-block;
     padding:0 1rem;
-    // border:1px solid red;
+}
+
+h4 {
+    background:$light;
+    padding-right:1rem;
 }
 
 li {

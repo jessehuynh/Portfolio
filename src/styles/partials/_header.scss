@@ -23,7 +23,7 @@ header {
         letter-spacing:5px;
     }
     .heading__h2--jesse {
-        font-size:8rem;
+        font-size:11rem;
         // border:1px solid red;
         transform:rotate(270deg);
         grid-column-end:-1;
@@ -47,14 +47,22 @@ header {
         @include dFlex(row wrap, inherit, inherit);
         box-shadow:inset 1px 1px 7.5px $dark;
         .card {
-            @include dFlex(row-reverse nowrap, inherit, center);
+            @include dFlex(row nowrap, inherit, center);
             width:100%;
             display:grid;
             grid-template-columns:1fr 1fr;
+            .stripes {
+                background:url(../../assets/box.png) no-repeat;
+                background-size:contain;
+                background-position: right bottom;
+                height:35rem;
+                width:95%;
+                @include dFlex(row nowrap, inherit, center);
+            }
             .card__image {
                 grid-column:2 / 3;
-                width:100%;
-                height:50vh;
+                width:90%;
+                height:30rem;
                 overflow: hidden;
                 img {
                     position: relative;
