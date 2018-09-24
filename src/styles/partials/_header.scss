@@ -27,9 +27,13 @@ header {
             background-size:cover;
             background-position-x:right;
             grid-template-columns:250px;
+            grid-template-rows:60vh;
         }
         @include breakPoint(fifthBreak) {
-            background-position: -200px;
+            background-position: -150px;
+        }
+        @include breakPoint(sixthBreak) {
+            background-position: center;
         }
     }
     .heading__h2 {
@@ -59,19 +63,26 @@ header {
         // border:1px solid red;
         background:$light;
         line-height:1;
-        @include breakPoint(secondBreak) {
+        @include breakPoint(thirdBreak) {
             left:inherit;
             right:0;
+            top:55%;
         }
         @include breakPoint(fifthBreak) {
+            right:-20%;
+        }
+        @include breakPoint(sixthBreak) {
             right:-35%;
+        }
+        @include breakPoint(seventhBreak) {
+            right:-44%;
         }
     }
     .container--about {
         // border:1px solid red;
         grid-column: 2 / -1;
         border-left:3px solid $light;
-        @include dFlex(row wrap, inherit, inherit);
+        @include dFlex(row wrap, inherit, flex-start);
         box-shadow:inset 1px 1px 7.5px $dark;
         @include breakPoint(thirdBreak) {
             grid-row:2;
@@ -87,6 +98,13 @@ header {
             display:grid;
             grid-template-columns:1fr 1fr;
             // border:1px solid black;
+            @include breakPoint(secondBreak) {
+                align-items:inherit;
+            }
+            @include breakPoint(thirdBreak) {
+                // position: relative;
+                flex-flow:column-reverse wrap;
+            }
             .stripes {
                 background:url(../../assets/box.png) no-repeat;
                 background-size:contain;
@@ -97,16 +115,37 @@ header {
                 @include breakPoint(secondBreak) {
                     display:none;
                 }
+                @include breakPoint(thirdBreak) {
+                    display:block;
+                    height:20rem;          
+                    justify-content: center;
+                }
+                @include breakPoint(sixthBreak) {
+                    display:none;
+                }
             }
             .card__image {
                 grid-column:2 / 3;
                 width:100%;
-                // height:30rem;
-                // overflow: hidden;
                 justify-content: flex-end;
                 align-self:center;
+                z-index:2;
                 @include breakPoint(secondBreak) {
                     display:none;
+                }
+            }
+            .card__image--headshot {
+                display:none;
+                img {
+                    position: relative;
+                    bottom:7.5rem;
+                }
+                @include breakPoint(thirdBreak) {
+                    display:block;
+                    overflow: hidden;
+                    height:20rem;
+                    width:25rem;
+                    grid-row:1;
                 }
             }
             .card__text {
@@ -118,9 +157,11 @@ header {
                     grid-column:1 / 3;
                     padding:1rem 3rem;
                 }
+                @include breakPoint(thirdBreak) {
+                    grid-row:2;
+                }
                 @include breakPoint(fifthBreak) {
-                    padding:0 2rem;
-                    // width:80%;
+                    padding:2rem;
                 }
                 .card__text__p {
                     margin:1rem 0;
@@ -129,6 +170,88 @@ header {
                     }
                 }
             }
+        }
+    }
+}
+
+.container--header {
+    position: fixed;
+    top:2rem;
+    left:2rem;
+    z-index: 20;
+    display:none;
+    ul {
+        padding:0;
+    }
+    @include breakPoint(thirdBreak) {
+        display:block;
+    }
+    .nav__container--header{
+        background:rgba(255,255,255,0.75);
+    }
+    .header {
+        text-decoration: none;
+        color:$base;
+        &:hover {
+            color:$accent;
+            text-shadow:1px 1px 0 $base;
+        }
+    }
+    
+}
+
+.nav__container--fixed {
+    position: absolute;
+    top:20rem;
+    left:2rem;
+    padding:0;
+    z-index:30;
+    .nav__listItem {
+        margin-bottom:1rem;
+    }
+    i {
+        font-size:2.5rem;
+        @include breakPoint(thirdBreak) {
+            color:$white;
+            text-shadow:2px 2px 0 $base;
+            &:hover {
+                color:$accent;
+            }
+        }
+    }
+}
+
+.nav__container--interests {
+    display:none;
+    @include breakPoint(thirdBreak) {
+        @include dFlex(row wrap, space-between, flex-end);
+        height:100%;
+        // border:1px solid red;
+        grid-column:1;
+        grid-row:1;
+        padding:2rem;
+        width:75%;
+        margin:0 auto;
+    }
+    @include breakPoint(sixthBreak) {
+        display:none;
+    }
+    .nav__listItem {
+        padding-top:1rem;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        font-size:1.6rem;
+        color:$accent;
+        text-align: center; 
+        // border:1px solid red;
+        width:50%;
+        @include breakPoint(fifthBreak) {
+            font-size:1.6rem;
+        }
+        figure {
+            width:50%;
         }
     }
 }

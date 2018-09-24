@@ -40,28 +40,37 @@ app.bagels = () => {
 
 
 app.styles = () => {
+    // SMOOTH SCROLL 
+    $('a').smoothScroll({
+        offset: 5,
+    });
+    $('.nav__container--sub').hide();
+
+    // FLICKITY
     $('.flickity').flickity({
-        wrapAround: true,
-        pageDots: false
-    }) 
+        wrapAround:true,
+        pageDots: false,
+    })
+
+    // HEADER NAV
+    $('.nav__container--header .nav__listItem').addClass('animated bounceInDown')
+    setTimeout(() => {
+        menuTab.hide('slow')
+    }, 5000)
 }
 
-// app.clickEvents = () => {
-//     // HEADER NAV
-//     $('.nav__listItem--cool h6').on('click', function () {
-//         menuTab.toggle();
-//         setTimeout(() => {
-//             menuTab.hide('slow')
-//         }, 15000)
-//     })
-//     $('.nav__listItem--contact').on('mouseover', function () {
-//         $('.nav__container--sub').show('fast')
-
-//     })
-// }
+app.clickEvents = () => {
+    // HEADER NAV
+    $('.nav__listItem--heading').on('click', function () {
+        menuTab.toggle();
+        setTimeout(() => {
+            menuTab.hide('slow')
+        }, 15000)
+    })
+}
 
 app.init = function () {
-    // app.clickEvents();
+    app.clickEvents();
     app.styles();
     app.bagels();
 }

@@ -53,11 +53,18 @@ h4 {
     padding-right:1rem;
 }
 
+h6 {
+    font-size:2.5rem;
+    color:$white;
+    text-shadow:2px 2px 0 $darkaccent;
+    z-index: 20;
+}
+
 li {
     list-style:none;
 }
 
-a {
+a:not(.header) {
     text-decoration: none;
     color:$accent;
     transition:all 0.2s;

@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
     <link rel="stylesheet" href="public/styles/style.css">
     <title>jesse huynh | web developer</title>
 </head>
@@ -19,25 +17,25 @@
 <body>
     <!-- HEADER STARTS -->
     <header id="top">
-        <!-- <nav class="container container--cool">
-            <ul>
-                <li class="nav__listItem nav__listItem--cool">
-                    <h6>MENU/</h6>
-                    <ul class="nav__container nav__container--header">
-                        <li class="nav__listItem nav__listItem--refresh"><a class="header" href="#top">Top</a></li>
-                        <li class="nav__listItem nav__listItem--portfolio"><a class="header" href="#portfolio">Portfolio</a></li>
-                        <li class="nav__listItem nav__listItem--about"><a class="header" href="#about">About</a></li>
-                        <li class="nav__listItem nav__listItem--phone">
-                            <a class="header" href="tel:9022192419">Call</a>
-                        </li>
-                        <li class="nav__listItem nav__listItem--email">
-                            <a class="header" href="mailto:jesseca.melise@live.com">Email</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav> -->
-        <!-- <ul class="nav__container nav__container--fixed">
+    <nav class="container container--header">
+        <ul>
+            <li class="nav__listItem nav__listItem--menu">
+                <h6 class="nav__listItem--heading">MENU/</h6>
+                <ul class="nav__container nav__container--header">
+                    <li class="nav__listItem nav__listItem--refresh"><a class="header" href="#top">Top</a></li>
+                    <li class="nav__listItem nav__listItem--portfolio"><a class="header" href="#portfolio">Portfolio</a></li>
+                    <li class="nav__listItem nav__listItem--about"><a class="header" href="#about">About</a></li>
+                    <li class="nav__listItem nav__listItem--phone">
+                        <a class="header" href="tel:9022192419">Call</a>
+                    </li>
+                    <li class="nav__listItem nav__listItem--email">
+                        <a class="header" href="mailto:jesseca.melise@live.com">Email</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        <ul class="nav__container nav__container--fixed">
             <li class="nav__listItem">
                 <a href="https://www.facebook.com/jesseca.melise" target="_blank">
                     <i class="fab fa-facebook"></i>
@@ -59,21 +57,50 @@
                 </a>
             </li>
 
-        </ul> -->
+        </ul>
         <h1 class="visuallyhidden">Jesse Huynh's Portfolio</h1>
         <div class="wrapper">
             <h2 class="heading__h2 heading__h2--jesse">Jesse Huynh</h2>
-            <!-- <h2 class="heading__h2--huynh">Huynh</h2> -->
             <h4 class="heading__h4">Web Developer</h4>
         </div>
 
         <!-- ABOUT SECTION -->
         <section class="container container--about" id="about">
-            <h3 class="visuallyhidden">About</h3>
+            <h3 class="about">About</h3>
             <article class="card card--about">
+                <ul class="nav__container nav__container--interests">
+                    
+                    <li class="nav__listItem">
+                        <figure>
+                            <img src="./assets/console.png" alt="">
+                            <p>Gamer</p>
+                        </figure>
+                    </li>
+                    <li class="nav__listItem">
+                        <figure>
+                            <img src="./assets/puzzle.png" alt="">
+                            <p>Puzzler</p>
+                        </figure>
+                    </li>
+                    <li class="nav__listItem">
+                        <figure>
+                            <img src="./assets/glue.png" alt="">
+                            <p>DIYer</p>
+                        </figure>
+                    </li>
+                    <li class="nav__listItem">
+                        <figure>
+                            <img src="./assets/placeholder.png" alt="">
+                            <p>Toronto</p>
+                        </figure>
+                    </li>  
+                </ul>
                 <div class="stripes">
-                    <figure class="card__image">
-                        <img src="./assets/jessegraffiti-optimized.jpg" alt="Headshot of web developer Jesse Huynh. Photo by Pam Lau">
+                    <figure class="card__image card__image--headshot">
+                        <img src="./assets/2018-summer-bootcamp-jessica-huynh-4.jpg" alt="Headshot of Jesse Huynh. Photo by Pam Lau">
+                    </figure>
+                    <figure class="card__image card__image--graffiti">
+                        <img src="./assets/jessegraffiti-optimized.jpg" alt="Jesse Huynh sitting on a ledge in front of a graffiti wall. Photo by Shangni Hu">
                     </figure>
                 </div>
                 <figcaption class="card__text"> 
@@ -95,7 +122,7 @@
             <!-- <div class="wrapper"> -->
                 <h3>Portfolio//</h3>
                 <!-- e-Card app -->
-                <div class="flickity__container flickity">
+                <div class="flickity">
                     <article class="card card--portfolio">
                         <figure class="card__image">
                             <img src="./assets/eCardMaker.jpg" alt="Screenshot of Jesse's e-Card Maker app">
@@ -146,7 +173,7 @@
 
                             <figcaption class="card__text card__text--odd">
                                 <h4>Overwatch Database</h4>
-                                <p>Look up your favourite Overwatch Hero with this database! This app uses Javascript and APIs to display hero stats and their location dynamically. Built <a class="team" href="http://www.erinmaaskant.com" target="_blank">Erin Maaskant.</a></p>
+                                <p>Look up your favourite Overwatch Hero with this database! This app uses Javascript and APIs to display hero stats and their location dynamically. Built with <a class="team" href="http://www.erinmaaskant.com" target="_blank">Erin Maaskant.</a></p>
                                 <ul class="card__list">
                                     <li class="nav__listItem">HTML</li>
                                     <li class="nav__listItem">CSS</li>
@@ -300,6 +327,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="public/scripts/app.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </body>
 
 </html>

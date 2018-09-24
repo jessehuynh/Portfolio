@@ -110,9 +110,9 @@ main {
         }
     }
     .card__text {
-        width:45%;
+        width:50%;
         // margin:2rem;
-        padding:0.5rem 1rem;
+        padding:0.5rem 0 0.5rem 2.5rem;
         transition:opacity 0.3s;
         // border:1px solid blue;
         @include dFlex(row wrap, inherit, center);
