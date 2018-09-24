@@ -38,9 +38,9 @@ $baseFont:'Roboto Condensed', sans-serif;
         @media (max-width:530px) {@content;}
     }
     @if $point == sixthBreak {
-        @media (max-width:465px) {@content;}
+        @media (max-width:470px) {@content;}
     }
     @if $point == seventhBreak {
-        @media (max-width:375px) {@content;}
+        @media (max-width:376px) {@content;}
     }
 }

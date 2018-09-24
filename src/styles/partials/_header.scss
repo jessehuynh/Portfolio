@@ -53,6 +53,14 @@ header {
             color:$white;
             text-shadow:2px 2px 0 $accent;
         }
+        @include breakPoint(sixthBreak) {
+            font-size:9rem;
+            left:2.5rem;
+            top:8rem;
+        }
+        @include breakPoint(seventhBreak) {
+            top:5rem;
+        }
     }
     .heading__h4 {
         font-size:4rem;
@@ -73,6 +81,7 @@ header {
         }
         @include breakPoint(sixthBreak) {
             right:-35%;
+            top:66%;
         }
         @include breakPoint(seventhBreak) {
             right:-44%;
@@ -180,6 +189,7 @@ header {
     left:2rem;
     z-index: 20;
     display:none;
+    font-size:1.8rem;
     ul {
         padding:0;
     }
