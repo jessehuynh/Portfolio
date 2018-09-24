@@ -24,13 +24,13 @@ $baseFont:'Roboto Condensed', sans-serif;
         @media (max-width:1150px) { @content;}
     }
     @if $point == secondBreak {
-        @media (max-width:1120px) { @content;}
+        @media (max-width:1000px) { @content;}
     }
     @if $point == thirdBreak {
-        @media (max-width:1002px) { @content;}
+        @media (max-width:800px) { @content;}
     }
     @if $point == fourthBreak {
-        @media (max-width:785px) {@content;}
+        @media (max-width:600px) {@content;}
     }
     @if $point == fifthBreak {
         @media (max-width:635px) {@content;}

@@ -4,4 +4,8 @@ footer {
     background-image:url(../../assets/box.png);
     background-size:contain;
     height:50vh;
+    @include breakPoint(thirdBreak) {
+        grid-row:3;
+        height:100%;
+    }
 }

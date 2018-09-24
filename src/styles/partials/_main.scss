@@ -2,14 +2,20 @@ main {
     background:$white;
     // border:1px solid blue;
     grid-column:1 / 3;
-    grid-row:2 / span 1;
+    grid-row:2;
     overflow-y:scroll;
     border-right:3px solid $light;
     border-top:3px solid $light;
     // height:calc(50vh - 0.5rem);
     height:50vh;
-    // margin-bottom:4vh;
     box-shadow:inset 1px 1px 7.5px $dark;
+    @include breakPoint(thirdBreak) {
+        grid-column:1;
+        grid-row:2;
+    }
+    @include breakPoint(fourthBreak) {
+        margin-bottom:none;
+    }
 }
 
 .container {
@@ -42,7 +48,7 @@ main {
 
 .container--skills {
     .wrapper {
-        @include dFlex(column wrap, inherit, inherit);
+        // @include dFlex(column wrap, inherit, inherit);
     }
     .container__list {
         margin:2rem auto;
@@ -50,20 +56,24 @@ main {
 }
 
 .container--portfolio {
-    // border:1px solid red;
+    border:1px solid red;
+    height:auto;
+    width:100%;
     .flickity {
         position: relative;
+        border:1px solid black;
         top:1.5rem;
     }
     .card {
         // border:1px solid red;
-        margin:0 auto;
+        // margin:0 auto;
         width:100%;
+        // height:auto;
     }
     .card__image {
-        width:90%;
+        width:80%;
         // border:1px solid red;
-        margin:0 auto;
+        // margin:0 auto;
         display:flex;
         img {
             border:1px solid $dark;
@@ -74,6 +84,9 @@ main {
             &:hover .card__text {
                 opacity:1;
             }
+        }
+        @include breakPoint(fourthBreak) {
+            width:100%;
         }
     }
     .card__text {
