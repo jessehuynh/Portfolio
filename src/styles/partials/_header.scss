@@ -22,6 +22,15 @@ header {
         grid-template-columns:1fr 1fr 1fr;
         grid-template-rows:50vh;
         z-index: 10;
+        @include breakPoint(thirdBreak) {
+            background:url(../../assets/jessegraffiti-optimized2.jpg) no-repeat;
+            background-size:cover;
+            background-position-x:right;
+            grid-template-columns:250px;
+        }
+        @include breakPoint(fifthBreak) {
+            background-position: -200px;
+        }
     }
     .heading__h2 {
         line-height:1;
@@ -34,6 +43,12 @@ header {
         grid-column-end:-1;
         position: relative;
         left:6.75rem;
+        @include breakPoint(thirdBreak) {
+            left:0;
+            top:3.25rem;
+            color:$white;
+            text-shadow:2px 2px 0 $accent;
+        }
     }
     .heading__h4 {
         font-size:4rem;
@@ -48,6 +63,9 @@ header {
             left:inherit;
             right:0;
         }
+        @include breakPoint(fifthBreak) {
+            right:-35%;
+        }
     }
     .container--about {
         // border:1px solid red;
@@ -59,11 +77,16 @@ header {
             grid-row:2;
             grid-column:1;
         }
+        @include breakPoint(fifthBreak) {
+            box-shadow:none;
+            border:none;
+        }
         .card {
             @include dFlex(row nowrap, inherit, center);
             width:100%;
             display:grid;
             grid-template-columns:1fr 1fr;
+            // border:1px solid black;
             .stripes {
                 background:url(../../assets/box.png) no-repeat;
                 background-size:contain;
@@ -77,16 +100,13 @@ header {
             }
             .card__image {
                 grid-column:2 / 3;
-                width:90%;
-                height:30rem;
-                overflow: hidden;
+                width:100%;
+                // height:30rem;
+                // overflow: hidden;
                 justify-content: flex-end;
+                align-self:center;
                 @include breakPoint(secondBreak) {
                     display:none;
-                }
-                img {
-                    position: relative;
-                    bottom:10rem;
                 }
             }
             .card__text {
@@ -98,8 +118,15 @@ header {
                     grid-column:1 / 3;
                     padding:1rem 3rem;
                 }
+                @include breakPoint(fifthBreak) {
+                    padding:0 2rem;
+                    // width:80%;
+                }
                 .card__text__p {
                     margin:1rem 0;
+                    @include breakPoint(fifthBreak) {
+                        margin:0;
+                    }
                 }
             }
         }

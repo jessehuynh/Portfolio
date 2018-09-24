@@ -12,9 +12,14 @@ main {
     @include breakPoint(thirdBreak) {
         grid-column:1;
         grid-row:2;
+        overflow-y:inherit;
     }
     @include breakPoint(fourthBreak) {
         margin-bottom:none;
+    }
+    @include breakPoint(fifthBreak) {
+        height:100%;
+        box-shadow:none;
     }
 }
 
@@ -56,31 +61,43 @@ main {
 }
 
 .container--portfolio {
-    border:1px solid red;
-    height:auto;
+    // border:1px solid red;
+    height:100%;
     width:100%;
+    @include breakPoint(fifthBreak) {
+        padding:0 1.5rem;
+    }
     .flickity {
-        position: relative;
-        border:1px solid black;
-        top:1.5rem;
+        margin:5rem auto;
+        @include breakPoint(fifthBreak) {
+            margin:0 auto;
+        }
     }
     .card {
         // border:1px solid red;
-        // margin:0 auto;
-        width:100%;
-        // height:auto;
+        width:90%;
+        display:flex;
+        margin:0 2.5rem;
+        @include breakPoint(fifthBreak) {
+            margin:0 4rem;
+        }
     }
     .card__image {
-        width:80%;
+        width:100%;
         // border:1px solid red;
-        // margin:0 auto;
         display:flex;
         img {
             border:1px solid $dark;
+            align-self:center;
+            width:50%;
+            @include breakPoint(firstBreak) {
+                width:100%;
+            }
         }
         @include breakPoint(firstBreak) {
             width:80%;
             position: relative;
+            margin:0 auto;
             &:hover .card__text {
                 opacity:1;
             }
@@ -88,16 +105,19 @@ main {
         @include breakPoint(fourthBreak) {
             width:100%;
         }
+        @include breakPoint(fifthBreak) {
+            flex-direction: column;
+        }
     }
     .card__text {
-        background:rgba(255,255,255,0.8);
-        width:70%;
+        width:45%;
         // margin:2rem;
         padding:0.5rem 1rem;
         transition:opacity 0.3s;
         // border:1px solid blue;
         @include dFlex(row wrap, inherit, center);
         @include breakPoint(firstBreak) {
+            background:rgba(255,255,255,0.8);
             position: absolute;
             width:100%;
             top:auto;
@@ -105,6 +125,12 @@ main {
             bottom:0;
             left:0;
             opacity:0;
+    
+        }
+        @include breakPoint(fifthBreak) {
+            position:inherit;
+            opacity:1;
+            margin-top:1rem;
         }
         .card__list {
             @include dFlex(row wrap, inherit, center);

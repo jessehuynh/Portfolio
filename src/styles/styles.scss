@@ -38,7 +38,7 @@ img {
     // border:1px solid red;
 }
 
-h1, h2, h3, h4, h5, a {
+h1, h2, h3, h4, h5 {
     @include fontBase($headFont, uppercase);
     display:inline-block;
 }
@@ -57,3 +57,12 @@ li {
     list-style:none;
 }
 
+a {
+    text-decoration: none;
+    color:$accent;
+    transition:all 0.2s;
+    &:hover {
+        color:$darkaccent;
+        text-decoration: underline;
+    }
+}

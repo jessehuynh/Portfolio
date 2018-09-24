@@ -2,6 +2,8 @@ $white: #FFF;
 $base: #000;
 $light: #e8e8e8;
 $dark: #333333;
+$accent: #ffb772;
+$darkaccent: #ffa44c;
 $baseFont:'Roboto Condensed', sans-serif;
 
 @mixin position($position, $top, $right, $bottom, $left) {
@@ -33,7 +35,7 @@ $baseFont:'Roboto Condensed', sans-serif;
         @media (max-width:600px) {@content;}
     }
     @if $point == fifthBreak {
-        @media (max-width:635px) {@content;}
+        @media (max-width:530px) {@content;}
     }
     @if $point == sixthBreak {
         @media (max-width:500px) {@content;}
