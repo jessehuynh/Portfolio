@@ -27,7 +27,7 @@ header {
             background-size:cover;
             background-position-x:right;
             grid-template-columns:250px;
-            grid-template-rows:60vh;
+            grid-template-rows:65vh;
         }
         @include breakPoint(fifthBreak) {
             background-position: -150px;
@@ -49,17 +49,23 @@ header {
         left:6.75rem;
         @include breakPoint(thirdBreak) {
             left:0;
-            top:3.25rem;
+            top:5rem;
             color:$white;
             text-shadow:2px 2px 0 $accent;
+            font-size:10rem;
+        }
+        @include breakPoint(fourthBreak) {
+            top:10rem;
+        }
+        @include breakPoint(fifthBreak) {
+            font-size:9rem;
         }
         @include breakPoint(sixthBreak) {
-            font-size:9rem;
             left:2.5rem;
             top:8rem;
         }
         @include breakPoint(seventhBreak) {
-            top:5rem;
+            top:10rem;
         }
     }
     .heading__h4 {
@@ -73,18 +79,21 @@ header {
         line-height:1;
         @include breakPoint(thirdBreak) {
             left:inherit;
-            right:0;
-            top:55%;
+            right:-20%;
+            top:0;
         }
         @include breakPoint(fifthBreak) {
-            right:-20%;
+            right:-25%;
         }
         @include breakPoint(sixthBreak) {
-            right:-35%;
-            top:66%;
+            right:-25%;
+            // top:40.25rem;
+            top:0;
+            font-size:3rem;
         }
         @include breakPoint(seventhBreak) {
-            right:-44%;
+            right:-30%;
+            font-size:2.5rem;
         }
     }
     .container--about {
@@ -177,6 +186,9 @@ header {
                     @include breakPoint(fifthBreak) {
                         margin:0;
                     }
+                    @include breakPoint(sixthBreak) {
+                        line-height:1.75;
+                    }
                 }
             }
         }
@@ -210,14 +222,19 @@ header {
     
 }
 
-.nav__container--fixed {
+.nav__container--media {
     position: absolute;
-    top:20rem;
+    top:10rem;
     left:2rem;
     padding:0;
     z-index:30;
+    @include dFlex(column, inherit, inherit);
+    // border:1px solid red;
     .nav__listItem {
-        margin-bottom:1rem;
+        padding:1rem;
+        @include breakPoint(fourthBreak) {
+            width:50%;
+        }
     }
     i {
         font-size:2.5rem;
@@ -228,6 +245,17 @@ header {
                 color:$accent;
             }
         }
+    }
+    @include breakPoint(thirdBreak) {
+        @include dFlex(row wrap, inherit, inherit)
+        top:38rem;
+    }
+    @include breakPoint(fourthBreak) {
+        width:25%;
+        top:35rem;
+    }
+    @include breakPoint(sixthBreak) {
+        top:33rem;
     }
 }
 

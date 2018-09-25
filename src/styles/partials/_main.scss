@@ -69,8 +69,9 @@ main {
     }
     .flickity {
         margin:5rem auto;
+        z-index:10;
         @include breakPoint(fifthBreak) {
-            margin:0 auto;
+            margin:4rem auto;
         }
     }
     .card {

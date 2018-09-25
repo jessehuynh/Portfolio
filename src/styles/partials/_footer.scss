@@ -4,8 +4,18 @@ footer {
     background-image:url(../../assets/box.png);
     background-size:contain;
     height:50vh;
+    position: relative;
     @include breakPoint(thirdBreak) {
         grid-row:3;
         height:100%;
+    }
+    .copyright {
+        position: absolute;
+        bottom:0;
+        right:0.5rem;
+        z-index:20;
+        @include breakPoint(fourthBreak) {
+            font-size:1.2rem;
+        }
     }
 }
