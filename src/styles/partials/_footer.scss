@@ -14,8 +14,39 @@ footer {
         bottom:0;
         right:0.5rem;
         z-index:20;
+        @include fontBase($headFont, uppercase);
         @include breakPoint(fourthBreak) {
             font-size:1.2rem;
         }
     }
 }
+
+
+.container {
+    // border:1px solid red;
+    // height:100%;
+    .container__list {
+        @include dFlex(row wrap, center, center);
+        padding:0;
+        .nav__listItem {
+            // border:1px solid red;
+            text-align: center;
+            width:calc(100% / 3);
+            margin:1.25rem 0;
+            @include dFlex(column wrap, center, center);
+            i {
+                font-size:5rem;
+                @include breakPoint(bigBreak) {
+                    font-size:7rem;
+                }
+            }
+            .firebase {
+                width:65px;
+                text-align: center;
+                justify-content: center;
+                filter:grayscale(100);
+            }
+        }
+    }
+}
+

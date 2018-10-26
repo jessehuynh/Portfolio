@@ -4,7 +4,7 @@ header {
     grid-column: 1 / -1;
     grid-row: 1 / span 1;
     z-index:20;
-    overflow-y:scroll;
+    // overflow-y:scroll;
     height:50vh;
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -13,7 +13,7 @@ header {
         grid-template-rows:1fr 1fr;
         height:100%;
     }
-    .wrapper {
+    .container--headings {
         // border:3px solid green;
         background:url(../../assets/box.png);
         background-size:contain;
@@ -28,6 +28,7 @@ header {
             background-position-x:right;
             grid-template-columns:250px;
             grid-template-rows:65vh;
+            position: relative;
         }
         @include breakPoint(fifthBreak) {
             background-position: -150px;
@@ -71,7 +72,9 @@ header {
     .heading__h4 {
         font-size:4rem;
         position: absolute;
-        top:45%;
+        // top:45%;
+        bottom:0;
+        line-height:0;
         left:50%;
         transform: translate(-50%);
         // border:1px solid red;
@@ -79,7 +82,8 @@ header {
         line-height:1;
         @include breakPoint(thirdBreak) {
             left:inherit;
-            right:-20%;
+            bottom:inherit;
+            right:-18%;
             top:0;
         }
         @include breakPoint(fifthBreak) {
@@ -88,7 +92,7 @@ header {
         @include breakPoint(sixthBreak) {
             right:-25%;
             // top:40.25rem;
-            top:0;
+            // top:0;
             font-size:3rem;
         }
         @include breakPoint(seventhBreak) {
@@ -105,6 +109,7 @@ header {
         @include breakPoint(thirdBreak) {
             grid-row:2;
             grid-column:1;
+            border-left:none;
         }
         @include breakPoint(fifthBreak) {
             box-shadow:none;
@@ -126,7 +131,7 @@ header {
             .stripes {
                 background:url(../../assets/box.png) no-repeat;
                 background-size:contain;
-                background-position: right bottom;
+                background-position: right 150px;
                 height:35rem;
                 width:95%;
                 @include dFlex(row nowrap, inherit, center);
@@ -137,6 +142,7 @@ header {
                     display:block;
                     height:20rem;          
                     justify-content: center;
+                    background-position: right bottom;
                 }
                 @include breakPoint(sixthBreak) {
                     display:none;
@@ -169,7 +175,8 @@ header {
             .card__text {
                 grid-row:1;
                 width:100%;
-                padding:1rem 2rem;
+                padding:0 2rem;
+                // border:1px solid red;
                 @include breakPoint(secondBreak) {
                     // border:1px solid red;
                     grid-column:1 / 3;
@@ -201,7 +208,7 @@ header {
     left:2rem;
     z-index: 20;
     display:none;
-    font-size:1.8rem;
+    font-size:2.5rem;
     ul {
         padding:0;
     }
@@ -214,7 +221,7 @@ header {
     .header {
         text-decoration: none;
         color:$base;
-        &:hover {
+        &:hover, &:active {
             color:$accent;
             text-shadow:1px 1px 0 $base;
         }
@@ -241,22 +248,22 @@ header {
         @include breakPoint(thirdBreak) {
             color:$white;
             text-shadow:2px 2px 0 $base;
-            &:hover {
+            &:hover, &:active {
                 color:$accent;
             }
         }
     }
     @include breakPoint(thirdBreak) {
-        @include dFlex(row wrap, inherit, inherit)
+        @include dFlex(row wrap, inherit, inherit);
         top:38rem;
     }
     @include breakPoint(fourthBreak) {
         width:25%;
-        top:35rem;
+        top:30rem;
     }
-    @include breakPoint(sixthBreak) {
-        top:33rem;
-    }
+    // @include breakPoint(sixthBreak) {
+    //     // top:33rem;
+    // }
 }
 
 .nav__container--interests {

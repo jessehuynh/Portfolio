@@ -10,13 +10,18 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <title>jesse huynh | web developer</title>
 </head>
 
 <body>
     <!-- HEADER STARTS -->
-    <header id="top">
+    <header id="top" data-aos="fade-left"
+    data-aos-anchor="#example-anchor"
+    data-aos-offset="300"
+    data-aos-duration="300">
     <nav class="container container--header">
         <ul>
             <li class="nav__listItem nav__listItem--menu">
@@ -52,21 +57,21 @@
                 </a>
             </li>
             <li class="nav__listItem">
-                <a href="https://www.instagram.com/jesse.melise" target="_blank">
-                    <i class="fab fa-instagram"></i>
+                <a href="https://medium.com/@jessehuynh" target="_blank">
+                    <i class="fab fa-medium"></i>
                 </a>
             </li>
 
         </ul>
         <h1 class="visuallyhidden">Jesse Huynh's Portfolio</h1>
-        <div class="wrapper">
+        <div class="container container--headings">
             <h2 class="heading__h2 heading__h2--jesse">Jesse Huynh</h2>
             <h4 class="heading__h4">Web Developer</h4>
         </div>
 
         <!-- ABOUT SECTION -->
         <section class="container container--about" id="about">
-            <h3 class="about">About</h3>
+            <h3 class="about">About//</h3>
             <article class="card card--about">
                 <ul class="nav__container nav__container--interests">
                     
@@ -104,11 +109,9 @@
                     </figure>
                 </div>
                 <figcaption class="card__text"> 
-                    <p class="card__text__p">My love for art/design, technology, and puzzles has turned me, from a Halifax-based hairstylist, into a front-end web developer, currently based in Toronto. I believe in writing clean, efficient code while creating an engaging user experience through my work. </p>
+                    <p class="card__text__p">My love for design, puzzles, and technology has turned me, from a Halifax-based hairstylist, into a front-end web developer, currently based in Toronto (but hopefully soon, Halifax?!). I write clean, efficient code while creating engaging websites and applications that are aesthetic and accessible to all users.</p>
     
-                    <p class="card__text__p">When I’m giving my laptop the opportunity to cool down, I’m thrift-shopping at local boutiques, playing Overwatch, and working out so I can eat twice the amount of snacks!</p>
-    
-                    <!-- <p class="card__text__p">TLDR: I'm pretty great.. Let's collaborate!</p> -->
+                    <p class="card__text__p">When I’m giving my laptop the opportunity to cool down, I’m thrift-shopping, playing Overwatch, or working out so I can eat twice the amount of snacks.</p>
                 </figcaption>
             </article>
         </section>
@@ -117,12 +120,14 @@
     <!-- HEADER ENDS -->
 
     <!-- MAIN STARTS -->
-    <main>
+    <main data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
         <section id="portfolio" class="container container--portfolio">
             <!-- <div class="wrapper"> -->
                 <h3>Portfolio//</h3>
-                <!-- e-Card app -->
                 <div class="flickity">
+                    <!-- e-Card app -->
                     <article class="card card--portfolio">
                         <figure class="card__image">
                             <img src="./assets/eCardMaker.jpg" alt="Screenshot of Jesse's e-Card Maker app">
@@ -144,14 +149,13 @@
                         </figure>
                     </article>
     
-    
                     <!-- Stumble Grumble Restaurant Finder app -->
                     <article class="card card--portfolio">
                         <figure class="card__image">
                             <img src="./assets/StumbleGrumble.jpg" alt="Screenshot of the Stumble Grumble Restaurant Finder's opening page">
                             <figcaption class="card__text">
                                 <h4>StumbleGrumble</h4>
-                                <p>Hungry? This StumbleGrumble React app uses Javascript and a few google APIs to generate as list of food options near you. Built with <a class="team" href="http://www.claireristow.com" target="_blank">Claire Ristow</a> and <a class="team" href="http://www.moingani.com" target="_blank">Moin Gani</a>.</p>
+                                <p>Hungry? This StumbleGrumble React app uses Javascript and a few google APIs to generate as list of food options near you. (*Get Directions* is under construction. Too many calls were made). Built with <a class="team" href="http://www.claireristow.com" target="_blank">Claire Ristow</a> and <a class="team" href="http://www.moingani.com" target="_blank">Moin Gani</a>.</p>
                                 <ul class="card__list">
                                     <li class="nav__listItem">HTML</li>
                                     <li class="nav__listItem">CSS & Sass</li>
@@ -165,6 +169,30 @@
                             </figcaption>
                         </figure>
                     </article>
+                    
+                    <!-- First Portfolio -->
+                    <article class="card card--portfolio">
+                        <figure class="card__image">
+                            <img src="./assets/firstPortfolio.jpg" alt="Screenshot of my first portfolio's hero header. Shows a custom SVG illustration of web developer, Jesse Huynh">
+                            <figcaption class="card__text card__text--odd">
+                                <h4>My First Portfolio</h4>
+                                <p>Here's a flashback to my first portfolio following the end of my bootcamp at HackerYou. This project was
+                                    built and designed by me in September 2018, and then I changed it, 3 days later, to my current
+                                    portfolio!</p>
+                                <ul class="card__list">
+                                    <li class="nav__listItem">HTML</li>
+                                    <li class="nav__listItem">CSS</li>
+                                    <li class="nav__listItem">Javascript</li>
+                                    <li class="nav__listItem">jQuery</li>
+                                </ul>
+                                <nav>
+                                    <a href="http://www.jesseh.codes/firstportfolio" target=”_blank”>View Live</a>
+                                    //
+                                    <a href="https://github.com/jessehuynh/JessicaHuynhPortfolio" target="_blank">GitHub</a>
+                                </nav>
+                            </figcaption>
+                        </figure>
+                    </article>
     
                     <!-- Overwatch Database app -->
                     <article class="card card--portfolio">
@@ -173,7 +201,7 @@
 
                             <figcaption class="card__text card__text--odd">
                                 <h4>Overwatch Database</h4>
-                                <p>Look up your favourite Overwatch Hero with this database! This app uses Javascript and APIs to display hero stats and their location dynamically. Built with <a class="team" href="http://www.erinmaaskant.com" target="_blank">Erin Maaskant.</a></p>
+                                <p>Look up your favourite Overwatch Hero with this mock-up agent database! This app uses Javascript and APIs to display hero stats and their location dynamically. Enter anything to "log in". Built with <a class="team" href="http://www.erinmaaskant.com" target="_blank">Erin Maaskant.</a></p>
                                 <ul class="card__list">
                                     <li class="nav__listItem">HTML</li>
                                     <li class="nav__listItem">CSS</li>
@@ -230,6 +258,7 @@
                                     <a href="#" target=”_blank”>View Live</a>
                                 </figcaption>
                             </article> -->
+
                     <!-- Corporate PSD Website -->
                     <article class="card card--portfolio">
                         <figure class="card__image">
@@ -238,7 +267,7 @@
                             <figcaption class="card__text card__text--odd">
                                 <div class="card__line card__line--odd"></div>
                                 <h4>Corporate - PSD Conversion</h4>
-                                <p>This PSD conversion shows a great use of BEM (naming convention), in combination with sass, to render a sleek and pixel-perfect design.</p>
+                                <p>This PSD conversion shows a great use of BEM (naming convention), to create reusable components in combination with Sass, to render a sleek, pixel-perfect and responsive design.</p>
                                 <ul class="card__list">
                                     <li class="nav__listItem">HTML</li>
                                     <li class="nav__listItem">CSS & Sass</li>
@@ -257,39 +286,41 @@
 <!-- MAIN ENDS -->
 
     <!-- FOOTER STARTS -->
-    <footer>
+    <footer data-aos="fade-up"
+    data-aos-duration="300">
         <section class="container container--skills">
             <h3>Skills//</h3>
             <div class="wrapper">
                 <ul class="container__list">
                     <li class="nav__listItem">
-                        <i class="devicon-html5-plain"></i>
-                        <!-- <h5>HTML5</h5> -->
+                        <i class="devicon-html5-plain" alt="Icon for HTML5">
+                            <!-- <h5>HTML5</h5> -->
+                        </i>
                     </li>
                     <li class="nav__listItem">
-                        <i class="devicon-css3-plain"></i>
+                        <i class="devicon-css3-plain" alt="Icon for CSS3"></i>
                         <!-- <h5>CSS3</h5> -->
                     </li>
                     
                     <li class="nav__listItem">
-                        <i class="devicon-javascript-plain"></i>
-                        <!-- <h5>Javascript</h5> -->
+                        <i class="devicon-javascript-plain" alt="Icon for JavaScript"></i>
+                        <!-- <h5>JavaScript</h5> -->
                     </li>
                     <li class="nav__listItem">
-                        <i class="devicon-sass-original"></i>
+                        <i class="devicon-sass-original" alt="Icon for Sass"></i>
                         <!-- <h5>Sass</h5> -->
                     </li>
 
                     <li class="nav__listItem">
-                        <i class="devicon-gulp-plain"></i>
+                        <i class="devicon-gulp-plain" alt="Icon for Gulp"></i>
                         <!-- <h5>Gulp</h5> -->
                     </li>
                     <li class="nav__listItem">
-                        <i class="devicon-github-plain"></i>
+                        <i class="devicon-github-plain" alt="Icon for GitHub"></i>
                         <!-- <h5>GitHub</h5> -->
                     </li>
                     <li class="nav__listItem">
-                        <i class="devicon-react-original"></i>
+                        <i class="devicon-react-original" alt="Icon for React"></i>
                         <!-- <h5>React</h5> -->
                     </li>
                     <li class="nav__listItem">
@@ -300,21 +331,21 @@
                     </li>
 
                     <li class="nav__listItem">
-                        <i class="devicon-jquery-plain"></i>
+                        <i class="devicon-jquery-plain" alt="Icon for jQuery"></i>
                         <!-- <h5>jQuery</h5> -->
                     </li>
                     <li class="nav__listItem">
-                        <i class="devicon-illustrator-line"></i>
+                        <i class="devicon-illustrator-line" alt="Icon for Adobe Illustrator"></i>
                         <!-- <h5>Illustrator</h5> -->
                     </li>
                 
                     <li class="nav__listItem">
-                        <i class="devicon-photoshop-line"></i>
+                        <i class="devicon-photoshop-line" alt="Icon for Adobe Photoshop"></i>
                         <!-- <h5>Photoshop</h5> -->
                     </li>
                   
                     <li class="nav__listItem">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-mobile-alt" alt="Icon of a phone for responsive design"></i>
                         <!-- <h5>Responsive</h5> -->
                     </li>
                     
@@ -322,12 +353,21 @@
             </div>
         </section>
         <!-- SKILLS ENDS -->
-        <div class="copyright">&copy; 2018 Jesse Huynh</div>
+        <!-- <div id="bagel-container" class="hide">
+            <div class="bagels bagels1"><img src="./assets/bens-bagels.png" alt="Hilarious image of Ben's face on a bagel"></div>
+            <div class="bagels bagels2"><img src="./assets/bens-bagels.png" alt="Hilarious image of Ben's face on a bagel"></div>
+            <div class="bagels bagels3"><img src="./assets/bens-bagels.png" alt="Hilarious image of Ben's face on a bagel"></div>
+            <div class="bagels bagels4"><img src="./assets/bens-bagels.png" alt="Hilarious image of Ben's face on a bagel"></div>
+            <div class="bagels bagels5"><img src="./assets/bens-bagels.png" alt="Hilarious image of Ben's face on a bagel"></div>
+        </div> -->
+
+        <div class="copyright">Built with ♡</div>
     </footer>
     <!-- FOOTER ENDS -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="public/scripts/app.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 

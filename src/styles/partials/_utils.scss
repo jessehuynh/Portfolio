@@ -22,6 +22,12 @@ $baseFont:'Roboto Condensed', sans-serif;
 }
 
 @mixin breakPoint($point) {
+      @if $point == bigBreak {
+        @media (min-width:1800px) {@content;}
+    }
+    @if $point == standard {
+        @media (max-width:1500px) {@content;}
+    }
     @if $point == firstBreak {
         @media (max-width:1150px) { @content;}
     }
@@ -42,5 +48,22 @@ $baseFont:'Roboto Condensed', sans-serif;
     }
     @if $point == seventhBreak {
         @media (max-width:374px) {@content;}
+    }
+
+}
+
+
+@keyframes falling-bagels {
+    0% {
+        top: -500px;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        margin-left: 10px;
+    }
+    20%, 40%, 60%, 80% {
+        margin-left: 100px;
+    }
+    100% {
+        top: 100%;
     }
 }
